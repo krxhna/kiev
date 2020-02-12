@@ -30,7 +30,41 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   elevation: 20,
-                  onPressed: null),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              
+                              right: 120,
+                              top: 500,
+                                                          child: Container(
+                                height: 160,
+                                width: 160,
+    
+                                child: FloatingActionButton(
+                                  
+                                  child: ClipOval(child: Container(                            color: Colors.amber,)),
+                                  onPressed: (){
+                                  Navigator.pop(context);
+                                })),
+                            ),
+                            Positioned(
+                              right: 152,
+                              top: 535,
+                                                          child: Container(
+                                height: 90,
+                                width: 90,
+                                child: FloatingActionButton(
+                                  child: Container(),
+                                  onPressed: (){
+                                  Navigator.pop(context);
+                                })),
+                            ),
+                          ],
+                        ));
+                  }),
             ),
           ),
         ],
@@ -206,7 +240,8 @@ class news extends StatelessWidget {
               child: IconButton(
                   icon: Icon(Icons.home),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyApp()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyApp()));
                   }),
             ),
             Icon(Icons.short_text),
