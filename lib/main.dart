@@ -36,31 +36,42 @@ class MyApp extends StatelessWidget {
                         child: Stack(
                           children: <Widget>[
                             Positioned(
-                              
                               right: 120,
                               top: 500,
-                                                          child: Container(
-                                height: 160,
-                                width: 160,
-    
-                                child: FloatingActionButton(
-                                  
-                                  child: ClipOval(child: Container(                            color: Colors.amber,)),
-                                  onPressed: (){
-                                  Navigator.pop(context);
-                                })),
+                              child: Container(
+                                  height: 160,
+                                  width: 160,
+                                  child: FloatingActionButton(
+                                      child: ClipOval(
+                                          child: Container(
+                                        decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                          Color(0xff11998E),
+                                          Color(0xff38EF7D)
+                                        ])),
+                                      )),
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      })),
                             ),
                             Positioned(
-                              right: 152,
+                              right: 155,
                               top: 535,
-                                                          child: Container(
-                                height: 90,
-                                width: 90,
-                                child: FloatingActionButton(
-                                  child: Container(),
-                                  onPressed: (){
-                                  Navigator.pop(context);
-                                })),
+                              child: Center(
+                                child: Container(
+                                    height: 90,
+                                    width: 90,
+                                    child: FloatingActionButton(
+                                     
+                                        child: ClipOval(
+                                                                                  child: Container(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        })),
+                              ),
                             ),
                           ],
                         ));
