@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Secondpage()),
+                    MaterialPageRoute(builder: (context) => news()),
                   );
                 },
               ),
@@ -145,7 +145,7 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.only(top: 0, left: 30, right: 30),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.amber,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(30)),
                 height: 500,
                 child: GridView.builder(
@@ -175,7 +175,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Secondpage extends StatelessWidget {
+class news extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -301,7 +301,7 @@ class shopping extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Secondpage()),
+                      MaterialPageRoute(builder: (context) => news()),
                     );
                   },
                 ),
@@ -313,101 +313,6 @@ class shopping extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
         ),
-        body: ListView(
-          children: <Widget>[
-            Container(
-              color: Colors.red,
-              height: 100,
-            ),
-            Container(
-              color: Colors.black,
-              height: 70,
-            ),
-            Container(
-                color: Colors.amber,
-                height: 250,
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1,
-                  children: <Widget>[
-                     Padding(
-                         padding: const EdgeInsets.all(30.0),
-                         child: Container(
-                          
-                          height: 110.00,
-                          width: 137.00,
-                          decoration: BoxDecoration(
-                            color: Colors.red, 
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.00, 3.00),
-                                color: Color(0xff000000).withOpacity(0.39),
-                                blurRadius: 6,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(20.00),
-                          ),
-                    ),
-                       ),
-                     Padding(
-                         padding: const EdgeInsets.all(30.0),
-                         child: Container(
-                          
-                          height: 110.00,
-                          width: 137.00,
-                          decoration: BoxDecoration(
-                            color: Colors.red, 
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.00, 3.00),
-                                color: Color(0xff000000).withOpacity(0.39),
-                                blurRadius: 6,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(20.00),
-                          ),
-                    ),
-                       ),Padding(
-                       padding: const EdgeInsets.all(30.0),
-                       child: Container(
-                        
-                        height: 110.00,
-                        width: 137.00,
-                        decoration: BoxDecoration(
-                          color: Colors.red, 
-                          boxShadow: [
-                            BoxShadow(
-                              offset: Offset(0.00, 3.00),
-                              color: Color(0xff000000).withOpacity(0.39),
-                              blurRadius: 6,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(20.00),
-                        ),
-                    ),
-                     ),Padding(
-                       padding: const EdgeInsets.all(30),
-                       child: Container(
-                        
-                        height: 110.00,
-                        width: 137.00,
-                        decoration: BoxDecoration(
-                          color: Colors.red, 
-                          boxShadow: [
-                            BoxShadow(
-                              offset: Offset(0.00, 3.00),
-                              color: Color(0xff000000).withOpacity(0.39),
-                              blurRadius: 6,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(20.00),
-                        ),
-                    ),
-                     ),
-
-                  ],
-                )),
-          ],
-        ));
+        body: Container());
   }
 }
