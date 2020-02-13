@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
 
 void main() {
   runApp(MaterialApp(
@@ -7,6 +10,7 @@ void main() {
   ));
 }
 
+//home
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -62,9 +66,8 @@ class MyApp extends StatelessWidget {
                                     height: 90,
                                     width: 90,
                                     child: FloatingActionButton(
-                                     
                                         child: ClipOval(
-                                                                                  child: Container(
+                                          child: Container(
                                             color: Colors.white,
                                           ),
                                         ),
@@ -109,7 +112,7 @@ class MyApp extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => news()),
+                    MaterialPageRoute(builder: (context) => News()),
                   );
                 },
               ),
@@ -220,7 +223,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class news extends StatelessWidget {
+//news
+class News extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -291,7 +295,7 @@ class news extends StatelessWidget {
                 left: 150,
                 child: Container(
                   child: Text(
-                    "news for you!",
+                    "News for you!",
                     style: TextStyle(
                         fontSize: 20,
                         fontStyle: FontStyle.italic,
@@ -305,10 +309,27 @@ class news extends StatelessWidget {
   }
 }
 
-class shopping extends StatelessWidget {
+//httprequest
+
+
+
+
+
+
+//Shopping
+
+class shopping extends StatefulWidget {
+  @override
+  _shoppingState createState() => _shoppingState();
+}
+
+class _shoppingState extends State<shopping> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: FloatingActionButton(onPressed: () {}),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(40)),
           child: Container(
@@ -347,7 +368,7 @@ class shopping extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => news()),
+                      MaterialPageRoute(builder: (context) => News()),
                     );
                   },
                 ),
@@ -359,6 +380,8 @@ class shopping extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
         ),
-        body: Container());
+        body:Container());
   }
 }
+
+//fetching data
